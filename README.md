@@ -13,31 +13,38 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
 1. **MySQL**
    - Banco de dados para o servidor Zabbix.
    - Exposição das portas: `3306`, `33060`.
+<br>
 
 2. **Zabbix Server**
    - Coleta dados de monitoramento enviados pelos agentes Zabbix.
    - Porta: `10051`.
+<br>
 
 3. **Zabbix Agent**
    - Instalado nos hosts monitorados para enviar métricas ao servidor Zabbix.
+<br>
 
 4. **Interface Web do Zabbix (Nginx)**
    - Fornece uma interface gráfica para gerenciar e visualizar os dados de monitoramento.
    - Portas: `80`, `443`.
+<br>
 
 5. **Grafana**
    - Dashboard para visualização de dados de monitoramento.
    - Inclui o plugin Zabbix.
    - Porta: `3000`.
+<br>
 
 6. **Prometheus**
    - Coleta e armazena métricas de diversos serviços.
    - Configurado para monitorar o Zabbix Agent, MySQL e Node Exporter.
    - Porta: `9090`.
+<br>
 
 7. **Node Exporter**
    - Fornece métricas do sistema operacional do host.
    - Porta: `9100`.
+<br>
 
 ## Configuração de Rede
 
@@ -74,6 +81,7 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
         - Faça o upload do arquivo `dashboard.json` ou copie e cole o conteúdo do arquivo na área de texto disponibilizada.
         - Clique em **Load** e configure as opções conforme necessário.
 <br>
+
 3. Configuração na interface do Zabbix:
     - Pode ser necessário configurar manualmente o IP do container Zabbix Agent na interface web do Zabbix.
     - Acesse a interface web do Zabbix em `<seu-ip:80>` e faça login com as credenciais padrão:
@@ -85,6 +93,7 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
         - Em **Hosts**, no campo **Interfaces**, localize o tipo **Agent**.
         - No campo **IP address**, insira o IP do container do Zabbix Agent (no exemplo, `172.22.0.5`).
         - Clique em **Update** para salvar as alterações.
+
 ---
 
 <div style="display: inline_block;">
