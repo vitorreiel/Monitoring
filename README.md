@@ -81,6 +81,8 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
    cd Monitoring
    docker compose up -d
   ```
+<br>
+
 2. Importar o dashboard para o Grafana:
     - Acesse o Grafana através da interface web `<seu-ip:3000>` e faça login com as credenciais padrão:
         - **Login:** `admin`
