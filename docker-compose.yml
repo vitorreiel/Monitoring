@@ -102,16 +102,6 @@ services:
         ipv4_address: 172.22.0.7
     restart: always
 
-  node-exporter:
-    image: prom/node-exporter:latest
-    container_name: node-exporter
-    ports:
-      - 9100:9100
-    networks:
-      zabbix-network:
-        ipv4_address: 172.22.0.8
-    restart: always
-
 networks:
   zabbix-network:
     name: zabbix-network
@@ -120,6 +110,7 @@ networks:
       config:
         - subnet: 172.22.0.0/24
           gateway: 172.22.0.1
+
 volumes:
   mysql_data:
     name: mysql
