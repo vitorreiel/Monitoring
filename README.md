@@ -1,12 +1,16 @@
 # Monitoramento com Zabbix, Prometheus, Grafana e Node Exporter
 
+<br>
+
 Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Docker Compose**. Ele inclui os seguintes serviços:
+<br>
 
 ## Requisitos
 
 - **Sistema Operacional**: Linux (preferencialmente com terminal Bash).
 - **Docker** ([Guia de instalação](https://docs.docker.com/get-docker/)).
 - **Docker Compose** ([Guia de instalação](https://docs.docker.com/compose/install/)).
+<br>
 
 ## Serviços
 
@@ -50,6 +54,8 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
 
 - Todos os serviços estão conectados a uma rede Docker personalizada (`zabbix-network`), com endereços IP estáticos atribuídos a cada container.
 
+<br>
+
 ## Volumes
 
 - A persistência dos dados é garantida utilizando volumes Docker:
@@ -57,11 +63,15 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
   - `grafana_data`: Armazena as configurações do Grafana.
   - `prometheus_data`: Armazena as configurações do Prometheus.
 
+<br>
+
 ## Arquivo `.env`
 
 - O projeto utiliza um arquivo `.env` para configurar variáveis de ambiente como credenciais de banco de dados, configurações do Zabbix e outros valores importantes.
 - Um exemplo de arquivo `.env` já está incluído no repositório com valores ajustados para facilitar a configuração inicial.
 - Todos os valores podem ser personalizados de acordo com suas necessidades específicas. Certifique-se de revisar e ajustar as variáveis conforme necessário antes de iniciar os serviços.
+
+<br>
 
 ## Como Usar
 
@@ -93,8 +103,11 @@ Este projeto configura um ambiente de monitoramento utilizando **Docker** e **Do
         - Em **Hosts**, no campo **Interfaces**, localize o tipo **Agent**.
         - No campo **IP address**, insira o IP do container do Zabbix Agent (no exemplo, `172.22.0.5`).
         - Clique em **Update** para salvar as alterações.
+<br>
 
 ---
+
+<br>
 
 <div style="display: inline_block;">
 
